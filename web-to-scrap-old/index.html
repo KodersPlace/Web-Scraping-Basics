@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Koders | Scraping</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2" defer></script>
+    <script src="./data.js" defer></script>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div id="app">
+      <table>
+        <tr>
+          <th>S. No.</th>
+          <th>Product Name</th>
+          <th>Price</th>
+          <th>Category</th>
+          <th>Brand</th>
+        </tr>
+        <tr v-for="row in tableData">
+          <td>{{ row.id }}</td>
+          <td>{{ row.name }}</td>
+          <td>{{ row.price }}</td>
+          <td>{{ row.category }}</td>
+          <td>{{ row.brand }}</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
